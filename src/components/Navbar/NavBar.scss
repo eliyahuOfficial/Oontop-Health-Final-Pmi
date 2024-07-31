@@ -1,0 +1,134 @@
+.site-navbar {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    .nav-left {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .nav-right {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        animation: bounce-top 0.9s both;
+    }
+
+}
+
+.nav-link {
+    position: relative;
+
+    color: inherit;
+
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+
+
+    &:hover {
+        color: #2401c4;
+
+    }
+
+    &:hover::after {
+        content: '';
+
+        position: absolute;
+
+        left: 0;
+        bottom: -2px;
+
+        width: 100%;
+
+        height: 2px;
+
+        background-color: #0099ff;
+
+    }
+}
+
+
+.hidden-at-1264 {
+    @media (max-width: 1264px) {
+        display: none;
+    }
+
+
+}
+
+
+
+
+@keyframes bounce-top {
+    0% {
+        -webkit-transform: translateY(-45px);
+        transform: translateY(-45px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 1;
+    }
+
+    24% {
+        opacity: 1;
+    }
+
+    40% {
+        -webkit-transform: translateY(-24px);
+        transform: translateY(-24px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    65% {
+        -webkit-transform: translateY(-12px);
+        transform: translateY(-12px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    82% {
+        -webkit-transform: translateY(-6px);
+        transform: translateY(-6px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    93% {
+        -webkit-transform: translateY(-4px);
+        transform: translateY(-4px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    25%,
+    55%,
+    75%,
+    87% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    100% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        opacity: 1;
+    }
+}
+
+
+
+.mainlogo {
+    background: linear-gradient(to right, #2401c4, #0099ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
